@@ -1,0 +1,25 @@
+{
+  "name": "my-portfoliooo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "framer-motion": "^6.3.16",
+    "hamburger-react": "^2.5.0",
+    "next": "12.1.6",
+    "nodemailer": "^6.7.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.1.6",
+    "sass": "^1.53.0"
+  }
+}
