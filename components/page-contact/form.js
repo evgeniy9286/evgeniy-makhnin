@@ -33,12 +33,14 @@ function Form() {
 	
   return (
   <>
-  <form className="form">
+	  <Form>
+  <div className="form">
 	<input type='text' value={name} onChange={event => setName(event.target.value)} placeholder="Ваше имя"/>
 	<input type='text' value={email} onChange={event => setEmail(event.target.value)} placeholder="Ваш E-mail"/>
 	<input type='text' value={phone} onChange={event => setPhone(event.target.value)} placeholder="Ваш телефон"/>
 	<textarea type='text' className='textarea' value={message} onChange={event => setMessage(event.target.value)} placeholder="Опишите ваш проект"/>
 	<button type='button' className='send-form' onClick={sendForm}>Отправить</button>
+   </div>
   </form>
 	 </>
   )
