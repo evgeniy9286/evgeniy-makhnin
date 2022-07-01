@@ -33,7 +33,7 @@ function Form() {
 	
   return (
   <>
-	  <Form>
+	  <form>
   <div className="form">
 	<input type='text' value={name} onChange={event => setName(event.target.value)} placeholder="Ваше имя"/>
 	<input type='text' value={email} onChange={event => setEmail(event.target.value)} placeholder="Ваш E-mail"/>
