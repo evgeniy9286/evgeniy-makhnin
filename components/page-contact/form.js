@@ -23,8 +23,7 @@ function Form() {
 			setPhone('');
 			setMessage('');
 			
-			alert('Ваша заявка отправлена')
-
+         alert ('Ваша заявка отправлена!')
 		} catch (error) {
 			console.log('Sending error', error);
 		}
@@ -34,13 +33,30 @@ function Form() {
 	
   return (
   <>
-  <div className="form">
-	<input type='text' value={name} onChange={event => setName(event.target.value)} placeholder="Ваше имя"/>
-	<input type='text' value={email} onChange={event => setEmail(event.target.value)} placeholder="Ваш E-mail"/>
-	<input type='text' value={phone} onChange={event => setPhone(event.target.value)} placeholder="Ваш телефон"/>
-	<textarea type='text' className='textarea' value={message} onChange={event => setMessage(event.target.value)} placeholder="Опишите ваш проект"/>
-	<button type='button' className='send-form' onClick={sendForm}>Отправить</button>
-   </div>
+  <form className = 'form'>
+	<input type='text'
+	 required
+    minLength="1"
+    maxLength="20" 
+	 value={name} placeholder="Ваше имя" onChange={event => setName(event.target.value)}/>
+	<input type='email'
+	required
+    minLength="5"
+	 pattern="[a-z]{0,9}{@}"
+	value={email}
+	placeholder="Ваш e-mail"
+	onChange={event => setEmail(event.target.value)}/>
+	<input type='tel'
+	required
+    minLength="11"
+    maxLength="12"
+	  pattern="{0,9}{+}"
+	value={phone}
+	placeholder="Ваш телефон"
+	onChange={event => setPhone(event.target.value)}/>
+	<textarea type='textarea' placeholder='Опишите ваш проект' pattern="{0,9}{a-z}{а-я}" value={message} onChange={event => setMessage(event.target.value)} className="textarea"/>
+	<button type='submit' onClick={sendForm} className="send-form">Отправить</button>
+  </form>
 	 </>
   )
 }
